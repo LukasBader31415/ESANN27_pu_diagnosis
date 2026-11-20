@@ -365,9 +365,10 @@ NOTES = """\
    corrected matrix: +.0063, G identity, K = 4 (`kverlauf_s1.csv`: K = 4, 8, 10, 15, 20, five repetitions). The runs
    with K = 2 and K = 12 (largest gain +.0016) are not part of the aggregated files here.
 3. The knee 17.6 % was computed on the published NAICS matrix (`isolation_knick.csv`, run of 2026-11-10). On the
-   corrected matrix the knee lies at 14.7 % (`vergleich_alt_neu.csv`, row "Hauptliste L0 Region am Knick"). With the
+   corrected matrix the knee lies at 14.7 % (`2026-11-20_A_isolation_knick_naicsfix/isolation_knick.csv`, row `neu`). With the
    knee as boundary, the candidate list shrinks from 319 to 303 on the published matrix; on the corrected matrix, where
-   the 10 % rule also gives 319 candidates, it shrinks to 311.
+   the 10 % rule also gives 319 candidates, it shrinks to 311 (`vergleich_alt_neu.csv`, row "Hauptliste L0 Region am
+   Knick").
 4. 104 features are listed; for 2 of them the stratified odds ratio is not estimable (empty `q_bh`); the
    smallest q among the 102 tested features is .821.
 5. The materials number .55 is the pair AUC of the materials-only view V3 (`views_neu.csv`, .554). The number of

@@ -45,7 +45,7 @@ correct) for both the frozen model and a k-NN reference and are not isolated. *C
 customers that are always right (at least 9 of 10) and not isolated. *Isolated* customers (the 10 % with the largest
 mean distance to their ten nearest neighbors) are excluded, because their errors could stem from missing data rather
 than overlap. The knee of the sorted distance curve lies at 17.6 % on the published NAICS matrix and at 14.7 % on the
-corrected one; with the knee as boundary, the candidate list shrinks from 319 to 303 on the published matrix; on the
+corrected one (`paper/results/2026-11-20_A_isolation_knick_naicsfix/isolation_knick.csv`); with the knee as boundary, the candidate list shrinks from 319 to 303 on the published matrix; on the
 corrected matrix, where the 10 % rule also gives 319 candidates, it shrinks to 311 (`docs/numbers.md`, note 3).
 
 ## Quickstart

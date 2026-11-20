@@ -28,7 +28,8 @@ and raw features for the reference models and single-feature tests. Settings of 
   knee of the sorted distance curve (Kneedle) lies at 17.6 % on the NAICS matrix published with ECML 2026 and at
   14.7 % on the corrected one; with the knee as boundary, the candidate list shrinks from 319 to 303 on the published
   matrix; on the corrected matrix, where the 10 % rule also gives 319 candidates, it shrinks to 311
-  (`paper/results/2026-11-10_A_L2_hub/isolation_knick.csv`, `2026-11-11_A_auswertung_naicsfix/vergleich_alt_neu.csv`).
+  (`paper/results/2026-11-10_A_L2_hub/isolation_knick.csv`, `2026-11-20_A_isolation_knick_naicsfix/isolation_knick.csv`,
+  `2026-11-11_A_auswertung_naicsfix/vergleich_alt_neu.csv`).
 - **Candidates**: label 0, always wrong for the model **and** the k-NN reference, not isolated.
   **Comparison customers**: label 0, always right for the model, not isolated.
 - **Pair AUC**: over all pairs of a positive and a label-0 object with the same group key, the probability that the
