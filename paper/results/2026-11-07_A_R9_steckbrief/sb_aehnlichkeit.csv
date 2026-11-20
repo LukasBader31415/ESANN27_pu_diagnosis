@@ -1,0 +1,25 @@
+distanz,vergleich,n_a,n_b,mittel,mittel_lo,mittel_hi,anteil_distanz_0
+View NAICS,innerhalb Kandidat,319,,0.755577,0.737424,0.774281,0.0580825
+View NAICS,innerhalb Kontrolle,186,,0.770782,0.741166,0.799109,0.123452
+View NAICS,innerhalb Käufer,579,,0.747788,0.732707,0.761699,0.0622598
+View NAICS,zwischen Kandidat – Käufer,319,579.0,0.751189,0.739886,0.762944,0.0592309
+View NAICS,zwischen Kandidat – Kontrolle,319,186.0,0.836682,0.817333,0.856473,0.0261402
+View NAICS,zwischen Kontrolle – Käufer,186,579.0,0.836916,0.817662,0.85574,0.0226754
+View HS,innerhalb Kandidat,319,,0.619385,0.57599,0.658261,0.1512
+View HS,innerhalb Kontrolle,186,,0.833509,0.797555,0.863323,0.0764313
+View HS,innerhalb Käufer,579,,0.595442,0.5664,0.625341,0.138402
+View HS,zwischen Kandidat – Käufer,319,579.0,0.606715,0.580979,0.630683,0.146994
+View HS,zwischen Kandidat – Kontrolle,319,186.0,0.946055,0.930666,0.95855,0.00123032
+View HS,zwischen Kontrolle – Käufer,186,579.0,0.948864,0.936426,0.961284,0.00129998
+View AM,innerhalb Kandidat,319,,0.366647,0.340239,0.393354,0.0710357
+View AM,innerhalb Kontrolle,186,,0.47717,0.435538,0.516167,0.0577739
+View AM,innerhalb Käufer,579,,0.337533,0.316549,0.357934,0.0944774
+View AM,zwischen Kandidat – Käufer,319,579.0,0.352543,0.335825,0.370767,0.0826687
+View AM,zwischen Kandidat – Kontrolle,319,186.0,0.462821,0.435259,0.492014,0.0406512
+View AM,zwischen Kontrolle – Käufer,186,579.0,0.464173,0.435959,0.490429,0.0464093
+kombiniert (frozen),innerhalb Kandidat,319,,0.580536,0.56346,0.598207,0.00250389
+kombiniert (frozen),innerhalb Kontrolle,186,,0.693821,0.671969,0.715374,0.00383609
+kombiniert (frozen),innerhalb Käufer,579,,0.560254,0.547069,0.57339,0.0031614
+kombiniert (frozen),zwischen Kandidat – Käufer,319,579.0,0.570149,0.558606,0.581347,0.0027937
+kombiniert (frozen),zwischen Kandidat – Kontrolle,319,186.0,0.748519,0.736739,0.760637,0.0
+kombiniert (frozen),zwischen Kontrolle – Käufer,186,579.0,0.749984,0.737637,0.762757,0.0

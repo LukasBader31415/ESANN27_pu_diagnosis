@@ -1,0 +1,81 @@
+schluessel,score,gewichtung,teilmenge,n_paare,n_schluessel,pair_auc,ci_lo,ci_hi,lesart
+naics_primaer,NAICS nur Primärcode (k 31),je Paar,alle,11205,139,0.5,0.5,0.5,Kontrolle (Abbruchregel)
+naics_primaer,NAICS nur Primärcode (k 31),je Schlüssel,alle,11205,139,0.5,0.5,0.5,Kontrolle (Abbruchregel)
+naics_primaer,NAICS voll (k 31),je Paar,alle,11205,139,0.567158,0.522688,0.608281,trennt
+naics_primaer,NAICS voll (k 31),je Schlüssel,alle,11205,139,0.50849,0.465453,0.5542,trennt nicht
+naics_primaer,HS (k 15),je Paar,alle,11205,139,0.497144,0.456872,0.536819,trennt nicht
+naics_primaer,HS (k 15),je Schlüssel,alle,11205,139,0.482654,0.43772,0.526897,trennt nicht
+naics_primaer,HS (k 15),je Paar,in der View verschieden,11122,139,0.497123,0.45669,0.536957,beschreibend
+naics_primaer,HS (k 15),je Schlüssel,in der View verschieden,11122,139,0.482199,0.437207,0.526659,beschreibend
+naics_primaer,AM (k 31),je Paar,alle,11205,139,0.496386,0.460161,0.539383,trennt nicht
+naics_primaer,AM (k 31),je Schlüssel,alle,11205,139,0.526343,0.482715,0.571651,trennt nicht
+naics_primaer,AM (k 31),je Paar,in der View verschieden,10995,139,0.496317,0.459321,0.540196,beschreibend
+naics_primaer,AM (k 31),je Schlüssel,in der View verschieden,10995,139,0.52683,0.480966,0.572359,beschreibend
+naics_primaer,HS + AM (k 31),je Paar,alle,11205,139,0.506783,0.468954,0.544755,trennt nicht
+naics_primaer,HS + AM (k 31),je Schlüssel,alle,11205,139,0.515907,0.47126,0.56218,trennt nicht
+naics_primaer,HS + AM (k 31),je Paar,in der View verschieden,11199,139,0.506786,0.46894,0.544791,beschreibend
+naics_primaer,HS + AM (k 31),je Schlüssel,in der View verschieden,11199,139,0.515938,0.471261,0.562181,beschreibend
+naics_primaer,s̄ frozen K 6 (10 OOF),je Paar,alle,11205,139,0.502053,0.475759,0.534258,trennt nicht
+naics_primaer,s̄ frozen K 6 (10 OOF),je Schlüssel,alle,11205,139,0.521012,0.472923,0.569589,trennt nicht
+hs_roh0,HS (k 15),je Paar,alle,233,26,0.5,0.5,0.5,Kontrolle (beschreibend)
+hs_roh0,HS (k 15),je Schlüssel,alle,233,26,0.5,0.5,0.5,Kontrolle (beschreibend)
+hs_roh0,NAICS nur Primärcode (k 31),je Paar,alle,233,26,0.512876,0.469529,0.593754,trennt nicht
+hs_roh0,NAICS nur Primärcode (k 31),je Schlüssel,alle,233,26,0.55379,0.456835,0.649038,trennt nicht
+hs_roh0,NAICS nur Primärcode (k 31),je Paar,in der View verschieden,150,23,0.52,0.452219,0.661625,beschreibend
+hs_roh0,NAICS nur Primärcode (k 31),je Schlüssel,in der View verschieden,150,23,0.584181,0.46104,0.711027,beschreibend
+hs_roh0,NAICS voll (k 31),je Paar,alle,233,26,0.566524,0.452698,0.644372,trennt nicht
+hs_roh0,NAICS voll (k 31),je Schlüssel,alle,233,26,0.581471,0.4455,0.713942,trennt nicht
+hs_roh0,NAICS voll (k 31),je Paar,in der View verschieden,150,23,0.536667,0.387637,0.621222,beschreibend
+hs_roh0,NAICS voll (k 31),je Schlüssel,in der View verschieden,150,23,0.533803,0.381623,0.688151,beschreibend
+hs_roh0,AM (k 31),je Paar,alle,233,26,0.534335,0.468207,0.589113,trennt nicht
+hs_roh0,AM (k 31),je Schlüssel,alle,233,26,0.481562,0.356088,0.605221,trennt nicht
+hs_roh0,AM (k 31),je Paar,in der View verschieden,225,26,0.535556,0.467884,0.596065,beschreibend
+hs_roh0,AM (k 31),je Schlüssel,in der View verschieden,225,26,0.484575,0.357017,0.608769,beschreibend
+hs_roh0,HS + AM (k 31),je Paar,alle,233,26,0.534335,0.461534,0.631392,trennt nicht
+hs_roh0,HS + AM (k 31),je Schlüssel,alle,233,26,0.500743,0.376115,0.622554,trennt nicht
+hs_roh0,HS + AM (k 31),je Paar,in der View verschieden,225,26,0.535556,0.460104,0.636117,beschreibend
+hs_roh0,HS + AM (k 31),je Schlüssel,in der View verschieden,225,26,0.50058,0.376252,0.623026,beschreibend
+hs_roh0,s̄ frozen K 6 (10 OOF),je Paar,alle,233,26,0.414163,0.302697,0.52034,trennt nicht
+hs_roh0,s̄ frozen K 6 (10 OOF),je Schlüssel,alle,233,26,0.434621,0.279164,0.581732,trennt nicht
+am_roh0,AM (k 31),je Paar,alle,7666,7,0.5,0.5,0.5,Kontrolle (beschreibend)
+am_roh0,AM (k 31),je Schlüssel,alle,7666,7,0.5,0.5,0.5,Kontrolle (beschreibend)
+am_roh0,NAICS nur Primärcode (k 31),je Paar,alle,7666,7,0.636968,0.608827,0.687915,trennt
+am_roh0,NAICS nur Primärcode (k 31),je Schlüssel,alle,7666,7,0.608616,0.563793,0.653293,trennt
+am_roh0,NAICS nur Primärcode (k 31),je Paar,in der View verschieden,7456,7,0.640826,0.611542,0.697771,beschreibend
+am_roh0,NAICS nur Primärcode (k 31),je Schlüssel,in der View verschieden,7456,7,0.615222,0.570805,0.658845,beschreibend
+am_roh0,NAICS voll (k 31),je Paar,alle,7666,7,0.651057,0.594937,0.70677,trennt
+am_roh0,NAICS voll (k 31),je Schlüssel,alle,7666,7,0.581227,0.501823,0.649239,trennt
+am_roh0,NAICS voll (k 31),je Paar,in der View verschieden,7456,7,0.65397,0.599983,0.708257,beschreibend
+am_roh0,NAICS voll (k 31),je Schlüssel,in der View verschieden,7456,7,0.572334,0.486905,0.651487,beschreibend
+am_roh0,HS (k 15),je Paar,alle,7666,7,0.576441,0.511159,0.604609,trennt
+am_roh0,HS (k 15),je Schlüssel,alle,7666,7,0.557553,0.484926,0.647514,trennt nicht
+am_roh0,HS (k 15),je Paar,in der View verschieden,7658,7,0.576521,0.511159,0.604756,beschreibend
+am_roh0,HS (k 15),je Schlüssel,in der View verschieden,7658,7,0.55772,0.485075,0.647817,beschreibend
+am_roh0,HS + AM (k 31),je Paar,alle,7666,7,0.545982,0.49544,0.555369,trennt nicht
+am_roh0,HS + AM (k 31),je Schlüssel,alle,7666,7,0.500972,0.371561,0.620564,trennt nicht
+am_roh0,HS + AM (k 31),je Paar,in der View verschieden,7658,7,0.54603,0.495434,0.555433,beschreibend
+am_roh0,HS + AM (k 31),je Schlüssel,in der View verschieden,7658,7,0.500402,0.370419,0.620587,beschreibend
+am_roh0,s̄ frozen K 6 (10 OOF),je Paar,alle,7666,7,0.616423,0.55344,0.651782,trennt
+am_roh0,s̄ frozen K 6 (10 OOF),je Schlüssel,alle,7666,7,0.561363,0.457915,0.664949,trennt nicht
+kombi_mnn,NAICS nur Primärcode (k 31),je Paar,alle,1304,111,0.543328,0.504032,0.554736,schwach
+kombi_mnn,NAICS nur Primärcode (k 31),je Schlüssel,alle,1304,111,0.50056,0.461481,0.538789,trennt nicht
+kombi_mnn,NAICS nur Primärcode (k 31),je Paar,in der View verschieden,761,59,0.574244,0.510161,0.602285,beschreibend
+kombi_mnn,NAICS nur Primärcode (k 31),je Schlüssel,in der View verschieden,761,59,0.516635,0.434979,0.598195,beschreibend
+kombi_mnn,NAICS voll (k 31),je Paar,alle,1304,111,0.533359,0.511754,0.586354,schwach
+kombi_mnn,NAICS voll (k 31),je Schlüssel,alle,1304,111,0.542912,0.47376,0.611992,trennt nicht
+kombi_mnn,NAICS voll (k 31),je Paar,in der View verschieden,761,59,0.551248,0.519727,0.623876,beschreibend
+kombi_mnn,NAICS voll (k 31),je Schlüssel,in der View verschieden,761,59,0.496349,0.385583,0.599908,beschreibend
+kombi_mnn,HS (k 15),je Paar,alle,1304,111,0.474693,0.392589,0.521932,trennt nicht
+kombi_mnn,HS (k 15),je Schlüssel,alle,1304,111,0.480787,0.406981,0.554398,trennt nicht
+kombi_mnn,HS (k 15),je Paar,in der View verschieden,1278,110,0.474178,0.382153,0.519681,beschreibend
+kombi_mnn,HS (k 15),je Schlüssel,in der View verschieden,1278,110,0.482704,0.40847,0.562695,beschreibend
+kombi_mnn,AM (k 31),je Paar,alle,1304,111,0.440567,0.360788,0.498608,schwach
+kombi_mnn,AM (k 31),je Schlüssel,alle,1304,111,0.465548,0.413532,0.516957,trennt nicht
+kombi_mnn,AM (k 31),je Paar,in der View verschieden,1129,92,0.431355,0.348896,0.497159,beschreibend
+kombi_mnn,AM (k 31),je Schlüssel,in der View verschieden,1129,92,0.458821,0.39528,0.51849,beschreibend
+kombi_mnn,HS + AM (k 31),je Paar,alle,1304,111,0.477377,0.444108,0.561199,trennt nicht
+kombi_mnn,HS + AM (k 31),je Schlüssel,alle,1304,111,0.518538,0.442997,0.597172,trennt nicht
+kombi_mnn,HS + AM (k 31),je Paar,in der View verschieden,1297,111,0.477255,0.443739,0.561603,beschreibend
+kombi_mnn,HS + AM (k 31),je Schlüssel,in der View verschieden,1297,111,0.515635,0.440412,0.593635,beschreibend
+kombi_mnn,s̄ frozen K 6 (10 OOF),je Paar,alle,1304,111,0.452837,0.393381,0.474973,schwach
+kombi_mnn,s̄ frozen K 6 (10 OOF),je Schlüssel,alle,1304,111,0.472351,0.395945,0.552565,trennt nicht

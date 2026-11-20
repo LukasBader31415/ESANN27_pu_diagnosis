@@ -1,0 +1,2 @@
+groesse,n,knick_rang_anteil,knick_wert,abstand,klar,knick_obere_anteil,schwelle_klar,anteil_mit_knick,rang_lo,rang_hi,wert_lo,wert_hi,boot_ziehungen,boot_seed
+"Isolation k 10, kombiniert normiert (wie F62)",2025,0.824111,0.232204,0.508969,True,0.175889,0.25,1,0.757399,0.856732,0.184654,0.249898,1000,20261111

@@ -1,0 +1,11 @@
+objekt,n_alt,n_neu,schnitt,jaccard
+Hauptliste frozen ∩ kNN L0 Region,319,319,247,0.631714
+Hauptliste frozen ∩ kNN L0 alle,329,330,256,0.635236
+Hauptliste frozen ∩ kNN L1 Region,105,106,80,0.610687
+Hauptliste frozen ∩ kNN L1 alle,135,137,107,0.648485
+Gruppe Kandidat,319,319,247,0.631714
+Gruppe Kontrolle,186,215,150,0.59761
+Gruppe Käufer,579,616,542,0.830015
+Gruppe untypischer Käufer,151,144,115,0.638889
+R8-Stichprobe kandidaten (161): bleibt in Gruppe Kandidat,161,131,,0.813665
+R8-Stichprobe kontrolle (161): bleibt in Gruppe Kontrolle,161,129,,0.801242

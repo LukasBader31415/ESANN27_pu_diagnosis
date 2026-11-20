@@ -1,0 +1,5 @@
+schluessel,n_paare,n_schluessel,anteil_groesster_schluessel,n_kunden_in_paaren,anteil_kunden_mit_zwilling,n_zwillingspaare_alle,dissens_zwillingspaare,anteil_paare_naics_roh0,anteil_paare_hs_roh0,anteil_paare_am_roh0,status,kontrolle_pair_auc
+naics_primaer,11205,139,0.156627,1851,0.968395,24141,0.464148,1,0.00740741,0.0187416,ok,0.5
+hs_roh0,233,26,0.330472,138,0.0923457,590,0.394915,0.356223,1,0.0343348,ok,
+am_roh0,7666,7,0.641012,343,0.171358,15833,0.484179,0.0273937,0.00104357,1,ok,
+kombi_mnn,1304,111,0.52684,691,0.487407,2868,0.454672,0.416411,0.0199387,0.134202,ok,

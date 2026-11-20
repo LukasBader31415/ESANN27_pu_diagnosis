@@ -1,0 +1,6 @@
+view,beschreibung,n_paare,n_schluessel,pair_auc,ci_lo,ci_hi,lesart,pair_auc_je_schluessel,anteil_gleichstand,knn_ba,k_eff_median,delta_pair_auc_vs_alt,delta_ci_lo,delta_ci_hi,delta_knn_ba_vs_alt,n_codes_verschieden,n_kunden_leer,anteil_paare_d0,anteil_paare_d1,n_werte_verschieden,t_s
+alt,"alte dritte View: A.B mit Produktfilter 0201 (ECML26, Paper A)",11205,139,0.497947,0.460252,0.543221,trennt nicht,0.523006,0.203748,0.546634,153,,,,,11,58,0.00772605,0.200862,101,0.3
+V1,V1 alle Anwendungen A.B ohne Produktfilter,11205,139,0.523963,0.485717,0.570413,trennt nicht,0.517468,0.0128514,0.553735,58,0.0260152,-0.0125305,0.065721,0.00710098,40,0,0,0.00216855,2347,0.4
+V2,"V2 Anwendung × Werkstoff (A.B_x.y.z, lexikographisch)",11205,139,0.53137,0.496664,0.565785,trennt nicht,0.516422,0.0137439,0.578956,69,0.0334226,-0.0191241,0.0750465,0.0323219,898,0,0,0.00216855,488289,1.4
+V3,V3 nur Werkstoffe (PIM-Ebenen-LCP),11205,139,0.554128,0.523083,0.585628,trennt,0.549734,0.10174,0.588651,69,0.0561803,-0.000617673,0.104383,0.0420173,40,0,0.000349388,0.053589,6661,0.5
+V3j,"V3 Jaccard auf den Werkstoffmengen (beschreibend, Auftrag A4)",11205,139,0.53552,0.502043,0.57349,schwach,0.557175,0.0986167,0.574849,137,0.0375725,-0.00446463,0.0757955,0.0282151,40,0,0.00352901,0.257996,144,0.3

@@ -1,0 +1,15 @@
+kennzahl,n,wert,bemerkung
+Firmenstatus gleich (belegt / nicht belegt / nicht entscheidbar),40,0.925,gleich 37; Schwelle 0.80: erreicht
+belegt ja/nein gleich,40,0.95,gleich 38
+Zelle antwort gleich,400,0.9425,gleich 377
+belegt alt (R8),40,6.0,
+belegt neu (R10),40,8.0,
+Kreuztabelle alt belegt × neu belegt,6,,
+Kreuztabelle alt belegt × neu nicht belegt,0,,
+Kreuztabelle alt belegt × neu nicht entscheidbar,0,,
+Kreuztabelle alt nicht belegt × neu belegt,2,,
+Kreuztabelle alt nicht belegt × neu nicht belegt,20,,
+Kreuztabelle alt nicht belegt × neu nicht entscheidbar,1,,
+Kreuztabelle alt nicht entscheidbar × neu belegt,0,,
+Kreuztabelle alt nicht entscheidbar × neu nicht belegt,0,,
+Kreuztabelle alt nicht entscheidbar × neu nicht entscheidbar,11,,

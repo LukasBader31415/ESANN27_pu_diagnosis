@@ -1,0 +1,7 @@
+modell,n_folds,ba_mittel,ba_min,ba_max,diff_zu_frozen_mittel,n_folds_besser_als_frozen,auc_mittel_oof,rec1_mittel,rec0_mittel,hauptliste_stets_richtig,abstimmung
+"HGB (Rohmerkmale, Primärcode kategorial)",50,0.566711,0.522769,0.61547,-0.0185343,16,0.617199,0.579125,0.554297,0.112853,Standard
+"Random Forest (Rohmerkmale, NAICS 2/3)",50,0.587413,0.515826,0.630564,0.00216791,25,0.632961,0.601466,0.57336,0.109718,500 Bäume
+"L1-logistisch (Rohmerkmale, NAICS 2/3/4)",50,0.572263,0.527455,0.642951,-0.0129817,14,0.617612,0.585661,0.558866,0.0940439,C 0.1
+"SVM (Kernel exp(−γD), D kombiniert frozen)",50,0.557538,0.497657,0.609589,-0.0277066,7,0.615581,0.571004,0.544073,0.0250784,γ = 1 × Median-Heuristik
+frozen K 6 (Referenz),50,0.585245,0.526357,0.629556,0,0,0.625355,0.73644,0.434051,0,–
+"kNN-Referenz (k 31, Mittel 3 Views, Modell-Splits, F61 Q5)",50,0.577634,0.536119,0.624177,-0.00761094,19,0.6251,0.685858,0.46941,,–

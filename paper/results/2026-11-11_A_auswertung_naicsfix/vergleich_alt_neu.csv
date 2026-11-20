@@ -1,0 +1,88 @@
+kennzahl,teil,variante,alt,neu,differenz,n,bemerkung
+BA Ende (Test),A1 K 6,CW_const,0.566531,0.579588,0.0130565,50,"gepaart je (rep, Fold); neu besser in 32"
+Recall L1,A1 K 6,CW_const,0.587864,0.668159,0.080295,50,Mittel über Fits
+Recall L0,A1 K 6,CW_const,0.545198,0.491016,-0.0541819,50,Mittel über Fits
+BA Ende (Test),A1 K 6,CW_sig10_e0.003_const,0.569678,0.57678,0.00710196,50,"gepaart je (rep, Fold); neu besser in 32"
+Recall L1,A1 K 6,CW_sig10_e0.003_const,0.647391,0.655691,0.00830036,50,Mittel über Fits
+Recall L0,A1 K 6,CW_sig10_e0.003_const,0.491965,0.497869,0.00590366,50,Mittel über Fits
+BA Ende (Test),A1 K 6,G_const,0.567196,0.578826,0.0116302,50,"gepaart je (rep, Fold); neu besser in 33"
+Recall L1,A1 K 6,G_const,0.571232,0.652458,0.0812263,50,Mittel über Fits
+Recall L0,A1 K 6,G_const,0.56316,0.505194,-0.057966,50,Mittel über Fits
+BA Ende (Test),A1 K 6,G_sig10_e0.003_const,0.572434,0.580936,0.00850222,50,"gepaart je (rep, Fold); neu besser in 33"
+Recall L1,A1 K 6,G_sig10_e0.003_const,0.635201,0.665522,0.030321,50,Mittel über Fits
+Recall L0,A1 K 6,G_sig10_e0.003_const,0.509667,0.49635,-0.0133163,50,Mittel über Fits
+BA Ende (Test),A1 K 6,frozen,0.57856,0.585245,0.0066855,50,"gepaart je (rep, Fold); neu besser in 31"
+Recall L1,A1 K 6,frozen,0.711197,0.73644,0.0252425,50,Mittel über Fits
+Recall L0,A1 K 6,frozen,0.445922,0.434051,-0.0118715,50,Mittel über Fits
+E-A1 Sigmoid − Identität (BA Ende),A1 K 6,G,0.0052383,0.00211036,-0.00312794,50,"Paare d > 0: alt 33, neu 25 (beschreibend, kein neues Urteil)"
+Ecke max α² > 0.95,A1 K 6,G Identität,0.98,1,0.02,50,E-A2 beschreibend
+Ecke max α² > 0.99,A1 K 6,G Identität,0.98,1,0.02,50,E-A2 beschreibend
+View in der Ecke (> .99): Anteil NAICS,A1 K 6,G Identität,1,1,0,50,"Fits in der Ecke alt 49, neu 50"
+View in der Ecke (> .99): Anteil HS,A1 K 6,G Identität,0,0,0,50,"Fits in der Ecke alt 49, neu 50"
+View in der Ecke (> .99): Anteil AM,A1 K 6,G Identität,0,0,0,50,"Fits in der Ecke alt 49, neu 50"
+Ecke max α² > 0.95,A1 K 6,G Sigmoid,0.02,0,-0.02,50,E-A2 beschreibend
+Ecke max α² > 0.99,A1 K 6,G Sigmoid,0,0,0,50,E-A2 beschreibend
+View in der Ecke (> .99): Anteil NAICS,A1 K 6,G Sigmoid,,,,0,"Fits in der Ecke alt 0, neu 0"
+View in der Ecke (> .99): Anteil HS,A1 K 6,G Sigmoid,,,,0,"Fits in der Ecke alt 0, neu 0"
+View in der Ecke (> .99): Anteil AM,A1 K 6,G Sigmoid,,,,0,"Fits in der Ecke alt 0, neu 0"
+E-A1 Sigmoid − Identität (BA Ende),A1 K 6,CW,0.0031467,-0.00280786,-0.00595456,50,"Paare d > 0: alt 28, neu 23 (beschreibend, kein neues Urteil)"
+Ecke max α² > 0.95,A1 K 6,CW Identität Klasse 0,0.9,0.82,-0.08,50,E-A2 beschreibend
+Ecke max α² > 0.99,A1 K 6,CW Identität Klasse 0,0.78,0.72,-0.06,50,E-A2 beschreibend
+View in der Ecke (> .99): Anteil NAICS,A1 K 6,CW Identität Klasse 0,0.974359,1,0.025641,36,"Fits in der Ecke alt 39, neu 36"
+View in der Ecke (> .99): Anteil HS,A1 K 6,CW Identität Klasse 0,0.025641,0,-0.025641,36,"Fits in der Ecke alt 39, neu 36"
+View in der Ecke (> .99): Anteil AM,A1 K 6,CW Identität Klasse 0,0,0,0,36,"Fits in der Ecke alt 39, neu 36"
+Ecke max α² > 0.95,A1 K 6,CW Sigmoid Klasse 0,0,0,0,50,E-A2 beschreibend
+Ecke max α² > 0.99,A1 K 6,CW Sigmoid Klasse 0,0,0,0,50,E-A2 beschreibend
+View in der Ecke (> .99): Anteil NAICS,A1 K 6,CW Sigmoid Klasse 0,,,,0,"Fits in der Ecke alt 0, neu 0"
+View in der Ecke (> .99): Anteil HS,A1 K 6,CW Sigmoid Klasse 0,,,,0,"Fits in der Ecke alt 0, neu 0"
+View in der Ecke (> .99): Anteil AM,A1 K 6,CW Sigmoid Klasse 0,,,,0,"Fits in der Ecke alt 0, neu 0"
+Ecke max α² > 0.95,A1 K 6,CW Identität Klasse 1,0.94,0.92,-0.02,50,E-A2 beschreibend
+Ecke max α² > 0.99,A1 K 6,CW Identität Klasse 1,0.82,0.86,0.04,50,E-A2 beschreibend
+View in der Ecke (> .99): Anteil NAICS,A1 K 6,CW Identität Klasse 1,0.560976,0.930233,0.369257,43,"Fits in der Ecke alt 41, neu 43"
+View in der Ecke (> .99): Anteil HS,A1 K 6,CW Identität Klasse 1,0.439024,0.0697674,-0.369257,43,"Fits in der Ecke alt 41, neu 43"
+View in der Ecke (> .99): Anteil AM,A1 K 6,CW Identität Klasse 1,0,0,0,43,"Fits in der Ecke alt 41, neu 43"
+Ecke max α² > 0.95,A1 K 6,CW Sigmoid Klasse 1,0,0,0,50,E-A2 beschreibend
+Ecke max α² > 0.99,A1 K 6,CW Sigmoid Klasse 1,0,0,0,50,E-A2 beschreibend
+View in der Ecke (> .99): Anteil NAICS,A1 K 6,CW Sigmoid Klasse 1,,,,0,"Fits in der Ecke alt 0, neu 0"
+View in der Ecke (> .99): Anteil HS,A1 K 6,CW Sigmoid Klasse 1,,,,0,"Fits in der Ecke alt 0, neu 0"
+View in der Ecke (> .99): Anteil AM,A1 K 6,CW Sigmoid Klasse 1,,,,0,"Fits in der Ecke alt 0, neu 0"
+BA Ende (Test),Einzel-View K 6,single_am,0.552106,0.557509,0.00540264,50,reps 0–9 (A3 + N2)
+BA Ende (Test),Einzel-View K 6,single_hs,0.563995,0.560883,-0.0031123,50,reps 0–9 (A3 + N2)
+BA Ende (Test),Einzel-View K 6,single_naics,0.576318,0.580688,0.00436976,50,reps 0–9 (A3 + N2)
+"kNN-Referenz LOO-BA (expand / Käuferanteil, F124)",alle Kunden,naics k 31,0.577847,0.589052,0.0112049,2025,normierte Matrizen
+"kNN-Referenz LOO-BA (expand / Käuferanteil, F124)",alle Kunden,hs k 15,0.569285,0.569285,0,2025,normierte Matrizen
+"kNN-Referenz LOO-BA (expand / Käuferanteil, F124)",alle Kunden,am k 31,0.546634,0.546634,0,2025,normierte Matrizen
+"kNN-Referenz LOO-BA (expand / Käuferanteil, F124)",alle Kunden,mittel3 k 31,0.584783,0.562019,-0.0227641,2025,normierte Matrizen
+"Gruppengröße (Raster F58, Isolation 10 %)",frozen K 6,Kandidat,319,319,0,2025,
+"Gruppengröße (Raster F58, Isolation 10 %)",frozen K 6,Kontrolle,186,215,29,2025,
+"Gruppengröße (Raster F58, Isolation 10 %)",frozen K 6,Käufer,579,616,37,2025,
+"Gruppengröße (Raster F58, Isolation 10 %)",frozen K 6,untypischer Käufer,151,144,-7,2025,
+"Hauptliste L0 Region am Knick (Sensitivität, F123)",frozen K 6,frozen ∩ kNN,303,311,,2025,"Knick alt obere 0.176, neu obere 0.147"
+Jaccard Hauptliste alt/neu,frozen ∩ kNN K 6,L0 Region,319,319,0.631714,247,"alt/neu = Größen, differenz = Jaccard, n = Schnitt"
+Jaccard Hauptliste alt/neu,frozen ∩ kNN K 6,L0 alle,329,330,0.635236,256,"alt/neu = Größen, differenz = Jaccard, n = Schnitt"
+Jaccard Hauptliste alt/neu,frozen ∩ kNN K 6,L1 Region,105,106,0.610687,80,"alt/neu = Größen, differenz = Jaccard, n = Schnitt"
+Jaccard Hauptliste alt/neu,frozen ∩ kNN K 6,L1 alle,135,137,0.648485,107,"alt/neu = Größen, differenz = Jaccard, n = Schnitt"
+R8-Stichprobe: Anteil bleibt in der Gruppe,F132 Vorbereitung,kandidaten,1,0.813665,-0.186335,161,
+R8-Stichprobe: Anteil bleibt in der Gruppe,F132 Vorbereitung,kontrolle,1,0.801242,-0.198758,161,
+B5 BA (Mittel 50 Folds),AP2 B5 neu,"HGB (Rohmerkmale, Primärcode kategorial)",,0.566711,,50,alt: A-A119
+B5 BA (Mittel 50 Folds),AP2 B5 neu,"Random Forest (Rohmerkmale, NAICS 2/3)",,0.587413,,50,alt: A-A119
+B5 BA (Mittel 50 Folds),AP2 B5 neu,"L1-logistisch (Rohmerkmale, NAICS 2/3/4)",,0.572263,,50,alt: A-A119
+B5 BA (Mittel 50 Folds),AP2 B5 neu,"SVM (Kernel exp(−γD), D kombiniert frozen)",,0.557538,,50,alt: A-A119
+B5 BA (Mittel 50 Folds),AP2 B5 neu,frozen K 6 (Referenz),,0.585245,,50,alt: A-A119
+B5 BA (Mittel 50 Folds),AP2 B5 neu,"kNN-Referenz (k 31, Mittel 3 Views, Modell-Splits, F61 Q5)",,0.577634,,50,alt: A-A119
+R1 anteil_gepflanzt_in_L0_falsch,R1 5 %,G_sig10_e0.003_const,0.384617,0.487179,0.102563,3,Mittel über Seeds
+R1 precision_liste_L0_falsch,R1 5 %,G_sig10_e0.003_const,0.0788667,0.0786496,-0.000217023,3,Mittel über Seeds
+R1 anteil_gepflanzt_in_L0_falsch,R1 5 %,frozen,0.50641,0.621795,0.115385,3,Mittel über Seeds
+R1 precision_liste_L0_falsch,R1 5 %,frozen,0.0780967,0.0744965,-0.00360021,3,Mittel über Seeds
+R1 anteil_gepflanzt_in_L0_falsch,R1 5 %,kNN,0.53846,0.461538,-0.0769215,3,Mittel über Seeds
+R1 precision_liste_L0_falsch,R1 5 %,kNN,0.0738367,0.0674494,-0.00638729,3,Mittel über Seeds
+R1 anteil_gepflanzt_in_L0_falsch,R1 10 %,G_sig10_e0.003_const,0.333333,0.362179,0.0288462,3,Mittel über Seeds
+R1 precision_liste_L0_falsch,R1 10 %,G_sig10_e0.003_const,0.162093,0.155605,-0.00648798,3,Mittel über Seeds
+R1 anteil_gepflanzt_in_L0_falsch,R1 10 %,frozen,0.391023,0.445513,0.0544895,3,Mittel über Seeds
+R1 precision_liste_L0_falsch,R1 10 %,frozen,0.148707,0.137826,-0.0108804,3,Mittel über Seeds
+R1 anteil_gepflanzt_in_L0_falsch,R1 10 %,kNN,0.40705,0.391026,-0.0160244,3,Mittel über Seeds
+R1 precision_liste_L0_falsch,R1 10 %,kNN,0.14684,0.148829,0.00198873,3,Mittel über Seeds
+"E-A4 AUC s1 (gekippte vs. L0, Mittel reps 0–4)",A2 K 6,CW_const,0.56468,0.5863,0.0216198,5,"beschreibend, kein neues Urteil"
+"E-A4 AUC s1 (gekippte vs. L0, Mittel reps 0–4)",A2 K 6,CW_sig10_e0.003_const,0.57281,0.57696,0.0041501,5,"beschreibend, kein neues Urteil"
+"E-A4 AUC s1 (gekippte vs. L0, Mittel reps 0–4)",A2 K 6,G_const,0.56864,0.602286,0.0336465,5,"beschreibend, kein neues Urteil"
+"E-A4 AUC s1 (gekippte vs. L0, Mittel reps 0–4)",A2 K 6,G_sig10_e0.003_const,0.59065,0.580283,-0.0103669,5,"beschreibend, kein neues Urteil"

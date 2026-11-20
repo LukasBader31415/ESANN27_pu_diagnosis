@@ -1,0 +1,17 @@
+seed,score,n_spione,n_echt0,auc,ci_lo,ci_hi,lesart,bemerkung
+101,s̄ frozen (R1-OOF),51,266,0.565974,0.476911,0.654073,trennt nicht,
+101,"L1-logistisch (Rohmerkmale, NAICS 2/3/4), CV stratifiziert",51,266,0.495577,0.410436,0.578888,trennt nicht,C häufigster 0.1
+101,"L1-logistisch (Rohmerkmale ohne NAICS-Primär), CV gruppiert nach Primärcode",51,266,0.471915,0.38213,0.561851,trennt nicht,C häufigster 0.1
+101,"HistGradientBoosting (Standardwerte, Primärcode kategorial), CV stratifiziert",51,266,0.489828,0.408667,0.570548,trennt nicht,
+102,s̄ frozen (R1-OOF),40,250,0.5457,0.453983,0.6372,trennt nicht,
+102,"L1-logistisch (Rohmerkmale, NAICS 2/3/4), CV stratifiziert",40,250,0.5714,0.473695,0.663605,trennt nicht,C häufigster 0.1
+102,"L1-logistisch (Rohmerkmale ohne NAICS-Primär), CV gruppiert nach Primärcode",40,250,0.5343,0.443197,0.6359,trennt nicht,C häufigster 0.1
+102,"HistGradientBoosting (Standardwerte, Primärcode kategorial), CV stratifiziert",40,250,0.5732,0.473878,0.666115,trennt nicht,
+103,s̄ frozen (R1-OOF),45,333,0.587054,0.492559,0.682216,trennt nicht,
+103,"L1-logistisch (Rohmerkmale, NAICS 2/3/4), CV stratifiziert",45,333,0.634968,0.550674,0.718328,trennt,C häufigster 0.1
+103,"L1-logistisch (Rohmerkmale ohne NAICS-Primär), CV gruppiert nach Primärcode",45,333,0.614348,0.52825,0.701772,trennt,C häufigster 0.1
+103,"HistGradientBoosting (Standardwerte, Primärcode kategorial), CV stratifiziert",45,333,0.653587,0.559289,0.744479,trennt,
+gepoolt,s̄ frozen (R1-OOF),136,849,0.568909,0.514175,0.624654,trennt,
+gepoolt,"L1-logistisch (Rohmerkmale, NAICS 2/3/4), CV stratifiziert",136,849,0.569428,0.518793,0.616308,trennt,C häufigster 0.1
+gepoolt,"L1-logistisch (Rohmerkmale ohne NAICS-Primär), CV gruppiert nach Primärcode",136,849,0.543462,0.490336,0.594885,trennt nicht,C häufigster 0.1
+gepoolt,"HistGradientBoosting (Standardwerte, Primärcode kategorial), CV stratifiziert",136,849,0.575108,0.522406,0.626185,trennt,

@@ -1,0 +1,7 @@
+teil,merkmal,basis,vergleich,n_a,n_b,schichten,delta,delta_lo,delta_hi
+alt,kaeuferanteil_naics_alt,m4-Dezil,Kandidat vs. Kontrolle,319,186.0,10.0,0.726644,0.641683,0.800596
+alt,kaeuferanteil_naics_alt,m4-Dezil,Kandidat vs. Käufer,319,579.0,10.0,-0.0681049,-0.148311,0.0112781
+alt,kaeuferanteil_naics_alt,m4-Dezil,Kontrolle vs. Käufer,186,579.0,10.0,-0.761568,-0.830153,-0.682923
+alt,kaeuferanteil_zwillinge,m4-Dezil,Kandidat vs. Kontrolle,313,182.0,10.0,0.707267,0.624495,0.784588
+alt,kaeuferanteil_zwillinge,m4-Dezil,Kandidat vs. Käufer,313,575.0,10.0,-0.0581173,-0.13899,0.0229935
+alt,kaeuferanteil_zwillinge,m4-Dezil,Kontrolle vs. Käufer,182,575.0,10.0,-0.743967,-0.815754,-0.66782

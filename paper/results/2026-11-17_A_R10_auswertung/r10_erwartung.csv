@@ -1,0 +1,2 @@
+id,test,statistik,p,effekt,intervall,erfuellt
+E-R10a,"Fisher exakt, einseitig (Käufer > R8-Kontrolle); nicht entscheidbar = nicht belegt",belegt 32/155 vs. 30/161,0.37877052126293165,Δ Anteil +0.020; OR 1.136,"Δ [-0.068, +0.108] (Newcombe); OR [0.627, 2.060] (exakt)",nein

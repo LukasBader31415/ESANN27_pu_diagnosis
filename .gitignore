@@ -1,0 +1,20 @@
+# local scratch, environments, caches
+.tmp/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# outputs of the notebooks and of the command line tool
+output/
+report/
+
+# never commit data: matrices, labels, customer lists
+*.npy
+*.npz
+*.pkl
+*.parquet
+*.duckdb

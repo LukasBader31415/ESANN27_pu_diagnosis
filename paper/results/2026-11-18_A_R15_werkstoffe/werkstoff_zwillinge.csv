@@ -1,0 +1,3 @@
+feld,n_paare_gesamt,n_paare,n_paare_entfallen,gewichtung,n_codes,n_kunden,anteil_gleichstand,pair_auc,ci_lo,ci_hi,lesart
+am_n_werkstoff,11205,11205,0,je Paar,139,1851,0.206783,0.543463,0.505558,0.576649,schwach
+am_n_werkstoff,11205,11205,0,je Code,139,1851,0.206783,0.554537,0.510307,0.596132,trennt

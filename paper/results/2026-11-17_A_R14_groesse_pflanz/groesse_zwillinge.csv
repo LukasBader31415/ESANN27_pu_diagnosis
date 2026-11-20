@@ -1,0 +1,5 @@
+feld,n_paare_gesamt,n_paare,n_paare_entfallen,gewichtung,n_codes,n_kunden,anteil_gleichstand,pair_auc,ci_lo,ci_hi,lesart
+employees_total,11205,11021,184,je Paar,139,1838,0.00970874,0.561791,0.532475,0.596253,trennt
+employees_total,11205,11021,184,je Code,139,1838,0.00970874,0.566924,0.519783,0.60946,trennt
+revenue_total,11205,10344,861,je Paar,136,1783,0.00193349,0.558971,0.535146,0.593128,trennt
+revenue_total,11205,10344,861,je Code,136,1783,0.00193349,0.55437,0.506759,0.604766,trennt

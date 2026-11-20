@@ -1,0 +1,13 @@
+modell,zeile,felder,fehlend,auc,pair_auc,pair_ci_lo,pair_ci_hi,ba_mittel,ba_min,ba_max,n_folds,n_folds_positiv,n_folds_gleich
+"B4 L1-logistisch (ohne NAICS, Folds nach Primärcode)",ohne Größe,–,–,0.590559,0.505846,0.465381,0.54397,0.558466,0.504707,0.617098,50,,
+"B4 L1-logistisch (ohne NAICS, Folds nach Primärcode)",mit Größe,employees_total + revenue_total,Median Trainingsteil + Fehlend-Indikator,0.610845,0.529674,0.482678,0.575853,0.575856,0.531893,0.644184,50,,
+"B4 L1-logistisch (ohne NAICS, Folds nach Primärcode)",Δ mit − ohne,employees_total + revenue_total,Median Trainingsteil + Fehlend-Indikator,0.0202859,0.0238286,0.00987152,0.0440787,0.0173903,-0.0357248,0.0816127,50,42,0
+"B4 GB flach Tiefe 3 (ohne NAICS, Folds nach Primärcode)",ohne Größe,–,–,0.588612,0.508612,0.471052,0.547147,0.557596,0.501591,0.620726,50,,
+"B4 GB flach Tiefe 3 (ohne NAICS, Folds nach Primärcode)",mit Größe,employees_total + revenue_total,"nativ NaN (HGB, Tiefe 3)",0.60325,0.513699,0.464996,0.568974,0.560972,0.493416,0.618132,50,,
+"B4 GB flach Tiefe 3 (ohne NAICS, Folds nach Primärcode)",Δ mit − ohne,employees_total + revenue_total,"nativ NaN (HGB, Tiefe 3)",0.0146373,0.00508701,-0.0152716,0.0342916,0.00337548,-0.0467408,0.0608194,50,28,0
+"B5 Random Forest (NAICS 2/3, Modell-Splits)",ohne Größe,–,–,0.632961,0.487193,0.442083,0.538259,0.587413,0.515826,0.630564,50,,
+"B5 Random Forest (NAICS 2/3, Modell-Splits)",mit Größe,employees_total + revenue_total,Median Trainingsteil + Fehlend-Indikator,0.649983,0.522713,0.479849,0.57095,0.596872,0.534695,0.650637,50,,
+"B5 Random Forest (NAICS 2/3, Modell-Splits)",Δ mit − ohne,employees_total + revenue_total,Median Trainingsteil + Fehlend-Indikator,0.0170219,0.0355199,0.0199043,0.0515952,0.00945864,-0.0285777,0.0523715,50,35,0
+"B5 HGB (Primärcode kategorial, Modell-Splits)",ohne Größe,–,–,0.617199,0.467291,0.428527,0.507627,0.566711,0.522769,0.61547,50,,
+"B5 HGB (Primärcode kategorial, Modell-Splits)",mit Größe,employees_total + revenue_total,nativ NaN,0.650065,0.534672,0.504801,0.566466,0.586004,0.511153,0.64312,50,,
+"B5 HGB (Primärcode kategorial, Modell-Splits)",Δ mit − ohne,employees_total + revenue_total,nativ NaN,0.0328666,0.0673806,0.0400576,0.0958717,0.0192933,-0.0307131,0.064916,50,41,0
