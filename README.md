@@ -3,7 +3,7 @@
 Code and aggregated results for
 
 > Lukas Bader, Ina Terwey-Scheulen and Dietlind Zühlke. *When misclassified is not mislabeled: a controlled diagnosis
-> of systematic errors in positive-unlabeled customer data.* ESANN 2027 (submitted).
+> of systematic errors in positive-unlabeled customer data.* ESANN 2027 (submitted, paper ID ES2027-186).
 
 
 ```bibtex
@@ -13,7 +13,7 @@ Code and aggregated results for
                positive-unlabeled customer data},
   booktitle = {European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning (ESANN 2027)},
   year      = {2027},
-  note      = {submitted}
+  note      = {submitted, paper ID ES2027-186}
 }
 ```
 
