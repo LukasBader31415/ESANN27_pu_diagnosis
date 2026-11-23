@@ -4,7 +4,7 @@
     python paper/paper_numbers.py --markdown   # rewrite docs/numbers.md
 
 Each entry names the file and the column / row it is read from. `paper` is the value as printed in the paper
-(main.tex, Overleaf version 4ed9427 of 2026-11-20); `computed` is the value from the CSV, rounded the same way (half up).
+(main.tex, Overleaf version 884c0ed of 2026-11-23); `computed` is the value from the CSV, rounded the same way (half up).
 """
 from __future__ import annotations
 
@@ -177,7 +177,7 @@ def entries():
     add("Abstract, Sect. 1, 2", "customers", "2,025", n(n0 + n1), "OOF", "`n`, rows frozen / neu, label 0 + label 1")
     add("Abstract, Sect. 2", "BA of the frozen model", ".585", ba_frozen, "EB",
         "`neu_ba_end`, variant frozen (also REF row `frozen K 6`)")
-    add("Sect. 1", "BA of the prototype model of the ECML 2026 paper", "about .59", "external", "–",
+    add("Sect. 1", "BA of the prototype model of the ECML 2026 paper", "around .59", "external", "–",
         "number from the ECML 2026 paper (Table 8 there), not from this repository (see note 1)")
     add("Sect. 2", "buyers (label 1)", "1,038", n(n1), "OOF", "`n`, frozen / neu / label 1")
     add("Sect. 2", "no observed purchase (label 0)", "987", n(n0), "OOF", "`n`, frozen / neu / label 0")
@@ -216,13 +216,13 @@ def entries():
     add("Tab. 1, Sect. 4.1", "buyers always wrong, observed", "184", n(one(oof(1), "stets_falsch")), "OOF",
         "`stets_falsch`, label 1")
     e1 = float(one(oof(1), "erwartet_falsch"))
-    add("Tab. 1 / Sect. 4.1", "buyers always wrong, expected", "1 / fewer than one",
-        f"{n(e1)} / {'fewer than one' if e1 < 1 else 'not < 1'} ({e1:.2f})", "OOF", "`erwartet_falsch`, label 1")
+    add("Tab. 1 / Sect. 4.1", "buyers always wrong, expected", "1 / less than one",
+        f"{n(e1)} / {'less than one' if e1 < 1 else 'not < 1'} ({e1:.2f})", "OOF", "`erwartet_falsch`, label 1")
     rm = ref_models()
     add("Tab. 1", "control of the reference models: frozen model", "BA .585",
         f"BA {f(one(T('REF')[T('REF').modell.str.startswith('frozen')], 'ba_mittel'), 3)}", "REF", "row `frozen K 6`")
-    add("Tab. 1, Sect. 4.1", "BA of RF, HGB, L1, SVM", ".56–.59", rng(rm.ba_mittel.min(), rm.ba_mittel.max()), "REF",
-        "`ba_mittel`, rows HGB, Random Forest, L1, SVM (see note 6)")
+    add("Tab. 1, Sect. 4.1", "BA of RF, HGB, LR, SVM", ".56–.59", rng(rm.ba_mittel.min(), rm.ba_mittel.max()), "REF",
+        "`ba_mittel`, rows HGB, Random Forest, L1-logistisch (= LR), SVM (see note 6)")
     add("Sect. 3, Tab. 1", "control: primary codes only", ".50", f(twin("NAICS nur Primärcode (k 31)")), "TWA",
         "`pair_auc`, naics_primaer / NAICS nur Primärcode / je Paar / alle")
     add("Sect. 4.2", "pair AUC products (HS)", ".50", f(twin("HS (k 15)")), "TWA", "score `HS (k 15)`, je Paar, alle")
@@ -261,10 +261,10 @@ def entries():
     add("Sect. 4.3", "times their share among label 0 in training", "about 1.5", f"{float(one(pl, 'lift')):.2f}",
         "PLANT", "`lift` (= .138 / .095)")
     sp = [spy(p) for p in ("s̄", "L1-logistisch (Rohmerkmale, NAICS", "HistGradientBoosting")]
-    add("Tab. 1, Sect. 4.3", "spy AUC s̄, L1, HGB", ".57–.58", rng(min(sp), max(sp)), "SPY",
-        "`auc`, seed gepoolt, rows s̄, L1 stratified, HGB")
+    add("Tab. 1, Sect. 4.3", "spy AUC s̄, LR, HGB", ".57–.58", rng(min(sp), max(sp)), "SPY",
+        "`auc`, seed gepoolt, rows s̄, LR stratified (`L1-logistisch …`), HGB")
     add("Tab. 1, Sect. 4.3", "spy AUC within industries", ".54", f(spy("L1-logistisch (Rohmerkmale ohne")), "SPY",
-        "`auc`, gepoolt, L1 grouped by primary code")
+        "`auc`, gepoolt, LR grouped by primary code (`L1-logistisch (Rohmerkmale ohne …`)")
     add("Sect. 4.3", "cleaning flags label 0", "53 %", pct(filt("B1", "anteil_entfernt_0_mittel")), "FILT",
         "`anteil_entfernt_0_mittel`")
     add("Sect. 4.3", "cleaning flags buyers", "32 %", pct(filt("B1", "anteil_entfernt_1_mittel")), "FILT",
@@ -292,14 +292,14 @@ def entries():
     add("Sect. 4.4", "agreement on re-checked companies", "37 of 40",
         f"{n(float(one(dr, 'wert')) * float(one(dr, 'n')))} of {n(one(dr, 'n'))}", "R10D",
         "`wert` × `n`, row Firmenstatus gleich (.925)")
-    add("Sect. 5, Fig. 1b", "share of buyers in the top 5 %", ".72", f(top(0.05)), "TOP", "`precision_kaeufer`, neu, .05")
+    add("Sect. 5, Fig. 1b", "share of buyers (precision) in the top 5 % by s̄", ".72", f(top(0.05)), "TOP", "`precision_kaeufer`, neu, .05")
     add("Sect. 5", "base rate", ".51", f(one(T("TOP")[T("TOP").stand == "neu"].head(1), "grundrate")), "TOP",
         "`grundrate`")
     add("Sect. 4.1 (no number)", "candidates as close to buyers as buyers to each other (combined distance)",
         "as close", f"cand–buyer {f(sim('zwischen Kandidat – Käufer'))}, within buyers {f(sim('innerhalb Käufer'))}, "
         f"cand–comparison {f(sim('zwischen Kandidat – Kontrolle'))}", "SIM", "`mittel`, distanz kombiniert (frozen)")
     add("Sect. 4.1 (no number)", "buyer share in own NAICS code (share difference)",
-        "almost as high as for buyers, far higher than for comparison customers",
+        "almost as high as for buyers, considerably higher than for comparison customers",
         f"cand vs. buyers {f(ind('Kandidat vs. Käufer'))}, cand vs. comparison {f(ind('Kandidat vs. Kontrolle'))}",
         "IND", "`delta`, merkmal kaeuferanteil_naics_alt")
     return pd.DataFrame(E)
@@ -320,8 +320,8 @@ VERBAL = {
 
 # Table 1 of the paper (main.tex), row by row: check, control, result
 TABLE1 = [
-    ("Error profile", "binomial null model", "always wrong: L0 463 vs. 117, buyers 184 vs. 1"),
-    ("Reference models", "frozen model (BA .585)", "BA .56–.59 for RF, HGB, L1, SVM"),
+    ("Error profile", "binomial null model", "always wrong: L0 463 vs. 117, L1 184 vs. 1"),
+    ("Reference models", "frozen model (BA .585)", "BA .56–.59 for RF, HGB, LR, SVM"),
     ("Industry twins", "primary codes only, must be .50", "views .50–.57, size .56, materials .55, ΔBA ≤ .02"),
     ("Planted buyers", "buyers not flipped", "AUC .61–.63 (M³GLVQ, RF, HGB), below .70, as for other buyers"),
     ("Spy", "spies are known buyers", "AUC .57–.58, within industries .54"),
@@ -338,16 +338,16 @@ def table1(df=None):
     rows = [
         ("Error profile", "binomial null model",
          f"always wrong: L0 {v['label 0 always wrong, observed']} vs. {v['label 0 always wrong, expected (null model)']}, "
-         f"buyers {v['buyers always wrong, observed']} vs. {v['buyers always wrong, expected'].split(' /')[0]}"),
+         f"L1 {v['buyers always wrong, observed']} vs. {v['buyers always wrong, expected'].split(' /')[0]}"),
         ("Reference models", f"frozen model ({v['control of the reference models: frozen model']})",
-         f"{'BA ' + v['BA of RF, HGB, L1, SVM']} for RF, HGB, L1, SVM"),
+         f"{'BA ' + v['BA of RF, HGB, LR, SVM']} for RF, HGB, LR, SVM"),
         ("Industry twins", f"primary codes only, must be {v['control: primary codes only']}",
          f"views {v['views (range)']}, size {v['pair AUC company size [95 % interval]'].split(' [')[0]}, "
          f"materials {v['pair AUC materials [95 % interval]'].split(' [')[0]}, ΔBA {'≤' if gain <= 0.02 else '>'} .02"),
         ("Planted buyers", "buyers not flipped",
          f"AUC {min(planted)}–{max(planted)} (M³GLVQ, RF, HGB), below .70, as for other buyers"),
         ("Spy", "spies are known buyers",
-         f"AUC {v['spy AUC s̄, L1, HGB']}, within industries {v['spy AUC within industries']}"),
+         f"AUC {v['spy AUC s̄, LR, HGB']}, within industries {v['spy AUC within industries']}"),
         ("Cleaning, reject", "frozen model",
          f"ΔBA {v['Δ BA, both classes cleaned']} / {v['Δ BA, only label 0 cleaned']}, rejecting barely helps"),
         ("Website check", "known buyers (positive control)",
@@ -358,7 +358,7 @@ def table1(df=None):
 
 
 NOTES = """\
-1. The introduction quotes "about .59" for the prototype model of the ECML 2026 paper (Table 8 there); it is not
+1. The introduction quotes "around .59" for the prototype model of the ECML 2026 paper (Table 8 there); it is not
    recomputed here. On the NAICS matrix published with that paper, the frozen model of this study reaches .579
    (`eval_beschreibend.csv`, `alt_ba_end`); on the corrected matrix .585 (abstract, Sect. 2).
 2. .006 is the largest gain of a learned variant (G or CW, identity or sigmoid) over frozen in this study on the
@@ -373,8 +373,8 @@ NOTES = """\
    smallest q among the 102 tested features is .821.
 5. The materials number .55 is the pair AUC of the materials-only view V3 (`views_neu.csv`, .554). The number of
    materials per company gives .543 per pair and .555 per code (`werkstoff_zwillinge.csv`).
-6. The reference models come from the run on the corrected matrix (`2026-11-11_A_AP2_hub_naicsfix`). The three models
-   on raw features do not depend on the NAICS matrix; the SVM does (.558 here, .560 on the published matrix,
+6. The reference models come from the run on the corrected matrix (`2026-11-11_A_AP2_hub_naicsfix`). CSV row names
+   `L1-logistisch …` = LR (L1-regularized logistic regression). The three models on raw features do not depend on the NAICS matrix; the SVM does (.558 here, .560 on the published matrix,
    `vergleich_alt_neu.csv`, rows "B5 BA").
 """
 
@@ -383,6 +383,9 @@ def markdown(df: pd.DataFrame) -> str:
     rows = ["# Numbers in the paper and where they come from", "",
             "All paths are relative to `paper/results/`. The notebook `paper/reproduce_paper.ipynb` prints this table "
             "next to the values in the paper; this file is written by `python paper/paper_numbers.py --markdown`.", "",
+            "Sect. 4.1–4.4 = the four unnumbered subsections of Section 4, in order. In the paper, LR is the "
+            "L1-regularized logistic regression and L1 denotes label 1 (caption of Table 1); in the CSVs, the row "
+            "names `L1-logistisch …` = LR.", "",
             "| Short | File |", "|---|---|"]
     rows += [f"| {k} | `{v}` |" for k, v in F.items()]
     rows += ["", "Column names in the CSVs are German: `stets falsch` = always wrong, `stets richtig` = always right, "

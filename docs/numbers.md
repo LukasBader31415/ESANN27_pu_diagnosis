@@ -2,6 +2,8 @@
 
 All paths are relative to `paper/results/`. The notebook `paper/reproduce_paper.ipynb` prints this table next to the values in the paper; this file is written by `python paper/paper_numbers.py --markdown`.
 
+Sect. 4.1–4.4 = the four unnumbered subsections of Section 4, in order. In the paper, LR is the L1-regularized logistic regression and L1 denotes label 1 (caption of Table 1); in the CSVs, the row names `L1-logistisch …` = LR.
+
 | Short | File |
 |---|---|
 | OOF | `2026-11-11_A_auswertung_naicsfix/hub_oof_profil.csv` |
@@ -36,7 +38,7 @@ Column names in the CSVs are German: `stets falsch` = always wrong, `stets richt
 |---|---|---|---|---|---|
 | Abstract, Sect. 1, 2 | customers | 2,025 | 2,025 | OOF | `n`, rows frozen / neu, label 0 + label 1 |
 | Abstract, Sect. 2 | BA of the frozen model | .585 | .585 | EB | `neu_ba_end`, variant frozen (also REF row `frozen K 6`) |
-| Sect. 1 | BA of the prototype model of the ECML 2026 paper | about .59 | external | – | number from the ECML 2026 paper (Table 8 there), not from this repository (see note 1) |
+| Sect. 1 | BA of the prototype model of the ECML 2026 paper | around .59 | external | – | number from the ECML 2026 paper (Table 8 there), not from this repository (see note 1) |
 | Sect. 2 | buyers (label 1) | 1,038 | 1,038 | OOF | `n`, frozen / neu / label 1 |
 | Sect. 2 | no observed purchase (label 0) | 987 | 987 | OOF | `n`, frozen / neu / label 0 |
 | Sect. 2 | base rate | .51 | .51 | TOP | `grundrate` (= 1038 / 2025 = .513) |
@@ -54,9 +56,9 @@ Column names in the CSVs are German: `stets falsch` = always wrong, `stets richt
 | Tab. 1, Sect. 4.1 | label 0 always wrong, observed | 463 | 463 | OOF | `stets_falsch`, frozen / neu / label 0 |
 | Tab. 1, Sect. 4.1 | label 0 always wrong, expected (null model) | 117 | 117 | OOF | `erwartet_falsch`, label 0 |
 | Tab. 1, Sect. 4.1 | buyers always wrong, observed | 184 | 184 | OOF | `stets_falsch`, label 1 |
-| Tab. 1 / Sect. 4.1 | buyers always wrong, expected | 1 / fewer than one | 1 / fewer than one (0.64) | OOF | `erwartet_falsch`, label 1 |
+| Tab. 1 / Sect. 4.1 | buyers always wrong, expected | 1 / less than one | 1 / less than one (0.64) | OOF | `erwartet_falsch`, label 1 |
 | Tab. 1 | control of the reference models: frozen model | BA .585 | BA .585 | REF | row `frozen K 6` |
-| Tab. 1, Sect. 4.1 | BA of RF, HGB, L1, SVM | .56–.59 | .56–.59 | REF | `ba_mittel`, rows HGB, Random Forest, L1, SVM (see note 6) |
+| Tab. 1, Sect. 4.1 | BA of RF, HGB, LR, SVM | .56–.59 | .56–.59 | REF | `ba_mittel`, rows HGB, Random Forest, L1-logistisch (= LR), SVM (see note 6) |
 | Sect. 3, Tab. 1 | control: primary codes only | .50 | .50 | TWA | `pair_auc`, naics_primaer / NAICS nur Primärcode / je Paar / alle |
 | Sect. 4.2 | pair AUC products (HS) | .50 | .50 | TWA | score `HS (k 15)`, je Paar, alle |
 | Sect. 4.2 | pair AUC applications | .50 | .50 | TWA | score `AM (k 31)`, je Paar, alle |
@@ -76,8 +78,8 @@ Column names in the CSVs are German: `stets falsch` = always wrong, `stets richt
 | Sect. 4.3 | planted buyers among label-0 always wrong | 45 % | 45 % | PLANT | `anteil_gekippt_in_L0_stets_falsch`, M³GLVQ |
 | Sect. 4.3 | share of planted buyers in that group | 14 % | 14 % | PLANT | `precision_liste`, M³GLVQ |
 | Sect. 4.3 | times their share among label 0 in training | about 1.5 | 1.45 | PLANT | `lift` (= .138 / .095) |
-| Tab. 1, Sect. 4.3 | spy AUC s̄, L1, HGB | .57–.58 | .57–.58 | SPY | `auc`, seed gepoolt, rows s̄, L1 stratified, HGB |
-| Tab. 1, Sect. 4.3 | spy AUC within industries | .54 | .54 | SPY | `auc`, gepoolt, L1 grouped by primary code |
+| Tab. 1, Sect. 4.3 | spy AUC s̄, LR, HGB | .57–.58 | .57–.58 | SPY | `auc`, seed gepoolt, rows s̄, LR stratified (`L1-logistisch …`), HGB |
+| Tab. 1, Sect. 4.3 | spy AUC within industries | .54 | .54 | SPY | `auc`, gepoolt, LR grouped by primary code (`L1-logistisch (Rohmerkmale ohne …`) |
 | Sect. 4.3 | cleaning flags label 0 | 53 % | 53 % | FILT | `anteil_entfernt_0_mittel` |
 | Sect. 4.3 | cleaning flags buyers | 32 % | 32 % | FILT | `anteil_entfernt_1_mittel`, B1 |
 | Tab. 1, Sect. 4.3 | Δ BA, both classes cleaned | −.006 | −.006 | FILT | `delta_ba_mittel`, B1 |
@@ -90,14 +92,14 @@ Column names in the CSVs are German: `stets falsch` = always wrong, `stets richt
 | Sect. 4.4 | known buyers with evidence | 32 of 155 | 32 of 155 | R10G | `n_belegt`, `n` |
 | Sect. 4.4 | Fisher test buyers vs. comparison customers | p = .38 | p = .38 | R10E | `p` (one-sided) |
 | Sect. 4.4 | agreement on re-checked companies | 37 of 40 | 37 of 40 | R10D | `wert` × `n`, row Firmenstatus gleich (.925) |
-| Sect. 5, Fig. 1b | share of buyers in the top 5 % | .72 | .72 | TOP | `precision_kaeufer`, neu, .05 |
+| Sect. 5, Fig. 1b | share of buyers (precision) in the top 5 % by s̄ | .72 | .72 | TOP | `precision_kaeufer`, neu, .05 |
 | Sect. 5 | base rate | .51 | .51 | TOP | `grundrate` |
 | Sect. 4.1 (no number) | candidates as close to buyers as buyers to each other (combined distance) | as close | cand–buyer .57, within buyers .56, cand–comparison .75 | SIM | `mittel`, distanz kombiniert (frozen) |
-| Sect. 4.1 (no number) | buyer share in own NAICS code (share difference) | almost as high as for buyers, far higher than for comparison customers | cand vs. buyers −.07, cand vs. comparison .73 | IND | `delta`, merkmal kaeuferanteil_naics_alt |
+| Sect. 4.1 (no number) | buyer share in own NAICS code (share difference) | almost as high as for buyers, considerably higher than for comparison customers | cand vs. buyers −.07, cand vs. comparison .73 | IND | `delta`, merkmal kaeuferanteil_naics_alt |
 
 ## Notes
 
-1. The introduction quotes "about .59" for the prototype model of the ECML 2026 paper (Table 8 there); it is not
+1. The introduction quotes "around .59" for the prototype model of the ECML 2026 paper (Table 8 there); it is not
    recomputed here. On the NAICS matrix published with that paper, the frozen model of this study reaches .579
    (`eval_beschreibend.csv`, `alt_ba_end`); on the corrected matrix .585 (abstract, Sect. 2).
 2. .006 is the largest gain of a learned variant (G or CW, identity or sigmoid) over frozen in this study on the
@@ -112,6 +114,6 @@ Column names in the CSVs are German: `stets falsch` = always wrong, `stets richt
    smallest q among the 102 tested features is .821.
 5. The materials number .55 is the pair AUC of the materials-only view V3 (`views_neu.csv`, .554). The number of
    materials per company gives .543 per pair and .555 per code (`werkstoff_zwillinge.csv`).
-6. The reference models come from the run on the corrected matrix (`2026-11-11_A_AP2_hub_naicsfix`). The three models
-   on raw features do not depend on the NAICS matrix; the SVM does (.558 here, .560 on the published matrix,
+6. The reference models come from the run on the corrected matrix (`2026-11-11_A_AP2_hub_naicsfix`). CSV row names
+   `L1-logistisch …` = LR (L1-regularized logistic regression). The three models on raw features do not depend on the NAICS matrix; the SVM does (.558 here, .560 on the published matrix,
    `vergleich_alt_neu.csv`, rows "B5 BA").

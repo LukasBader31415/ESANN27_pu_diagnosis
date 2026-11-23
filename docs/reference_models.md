@@ -6,7 +6,9 @@ the development environment; the versions on the compute server were not recorde
 
 The paper (Sect. 3) describes the reference models as "with class-balanced weights on the same splits". All four use
 `class_weight="balanced"`; further settings that differ from the scikit-learn defaults (500 trees for the random
-forest, one parameter tuned by inner cross-validation for L1 and the SVM, engineered input features) are listed below.
+forest, one parameter tuned by inner cross-validation for LR and the SVM, engineered input features) are listed below.
+LR is the L1-regularized logistic regression; CSV row names `L1-logistisch …` = LR (`vergleichsmodelle.csv`,
+`spy_trennung.csv`).
 The numbers in the paper come from the run on the corrected NAICS matrix (`paper/results/2026-11-11_A_AP2_hub_naicsfix/
 vergleichsmodelle.csv`, frozen model BA .585).
 
@@ -19,11 +21,12 @@ vergleichsmodelle.csv`, frozen model BA .585).
   SHA-256, first 16 hex) `8b347df42b1a2c37`. Each customer gets 10 OOF predictions.
 - **Dissimilarities**: each view scaled by the 5 % / 95 % quantiles of its upper triangle (all customers, no
   labels), clipped to [0, 1]. Combined distance = mean of the three views (= metric of the frozen model).
-- **Raw features** (RF, HGB, L1): log1p of counts; 0/1 indicators for codes held by at least 20 customers
+- **Raw features** (RF, HGB, LR): log1p of counts; codes multi-hot encoded (one 0/1 column per code; a customer can
+  carry several codes), for codes held by at least 20 customers
   (NAICS levels 2/3/4 of the primary code, HS 4-digit, application main and sub category); secondary-NAICS
-  indicators; no further scaling except the standard scaler inside the L1 pipeline.
+  indicators; no further scaling except the standard scaler inside the LR pipeline.
 - **Scores**: AUC and pair AUC use the mean OOF score over the 10 repetitions (s̄ for M3GLVQ, `predict_proba[:, 1]`
-  for RF/HGB/L1, `decision_function` for the SVM). BA uses `predict()` per fold, averaged over the 50 folds.
+  for RF/HGB/LR, `decision_function` for the SVM). BA uses `predict()` per fold, averaged over the 50 folds.
 
 ## Models
 
@@ -33,12 +36,12 @@ vergleichsmodelle.csv`, frozen model BA .585).
 | **k-NN reference** | own code | k = 31 on the combined distance, exactly k neighbours from the fit part (stable sort; ties by index), score = share of buyers, prediction share > .5 | three views |
 | **Random forest (RF)** | `RandomForestClassifier` (scikit-learn) | `n_estimators=500`, `class_weight="balanced"`, `random_state=20261111` | raw features with NAICS levels 2 and 3 |
 | **Histogram gradient boosting (HGB)** | `HistGradientBoostingClassifier` | `class_weight="balanced"`, `random_state=20261111`, `categorical_features=[primary code]` (6-digit primary NAICS code as one categorical column, the 254 most frequent codes, the rest pooled) | raw features without NAICS levels, plus the primary code |
-| **L1 logistic regression (L1)** | `StandardScaler` + `LogisticRegression` | `l1_ratio=1.0` (pure L1), `solver="liblinear"`, `class_weight="balanced"`, `max_iter=2000`; C ∈ {0.01, 0.1, 1, 10} by inner stratified 3-fold CV on the fit part (AUC, `random_state=20261111 + rep`); `vergleichsmodelle.csv` reports C = 0.1 (column `abstimmung`) | raw features with NAICS levels 2, 3 and 4 |
+| **L1-regularized logistic regression (LR)** (CSV row `L1-logistisch …`) | `StandardScaler` + `LogisticRegression` | `l1_ratio=1.0` (pure L1), `solver="liblinear"`, `class_weight="balanced"`, `max_iter=2000`; C ∈ {0.01, 0.1, 1, 10} by inner stratified 3-fold CV on the fit part (AUC, `random_state=20261111 + rep`); `vergleichsmodelle.csv` reports C = 0.1 (column `abstimmung`) | raw features with NAICS levels 2, 3 and 4 |
 | **SVM** | `SVC(kernel="precomputed")` | `class_weight="balanced"`, C = 1; kernel exp(−f·g0·D) on the combined distance D, g0 = 1 / median of D on the fit part, f ∈ {0.5, 1, 2} by inner stratified 3-fold CV on BA (`random_state=20261111 + rep`); `vergleichsmodelle.csv` reports f = 1 | combined distance |
-| **L1 grouped by primary code** (twins, spy "within industries") | as L1 | C ∈ {0.01, 0.03, 0.1, 0.3, 1, 3}, chosen by inner grouped 3-fold CV; outer CV: 5 folds grouped by primary code (groups permuted with seed 20261111 + rep and assigned by cumulative size), 10 repetitions; not the model splits; BA at threshold .5 | raw features without any primary-code feature |
-| **Boosting depth 3** (size and materials, Sect. 4.2) | `HistGradientBoostingClassifier` | `max_depth=3`, `class_weight="balanced"`, `random_state=20261111 + rep`; folds as for L1 grouped | as L1 grouped (missing size values: native NaN) |
+| **LR grouped by primary code** (twins, spy "within industries") | as LR | C ∈ {0.01, 0.03, 0.1, 0.3, 1, 3}, chosen by inner grouped 3-fold CV; outer CV: 5 folds grouped by primary code (groups permuted with seed 20261111 + rep and assigned by cumulative size), 10 repetitions; not the model splits; BA at threshold .5 | raw features without any primary-code feature |
+| **Boosting depth 3** (size and materials, Sect. 4.2) | `HistGradientBoostingClassifier` | `max_depth=3`, `class_weight="balanced"`, `random_state=20261111 + rep`; folds as for LR grouped | as LR grouped (missing size values: native NaN) |
 
-Size (Sect. 4.2): log1p(employees) and log1p(revenue, USD only) added to the features; RF and L1 impute the median
+Size (Sect. 4.2): log1p(employees) and log1p(revenue, USD only) added to the features; RF and LR impute the median
 of the training part and add a missing-value indicator, HGB and boosting depth 3 use native NaN. Materials: number of
 materials and 0/1 indicators for materials and material groups with at least 20 carriers.
 
@@ -53,8 +56,8 @@ materials and 0/1 indicators for materials and material groups with at least 20 
   label-0 customers (Mann-Whitney, ties one half); per seed, and pooled over pairs within seeds ("Mittel"); 95 %
   intervals by a bootstrap over customers per seed and class (2000 draws, seed 20261111).
 - **Always wrong** for the planted runs is counted against the training labels (flipped = 0).
-- **Spy**: pool = training label 0, always wrong, not isolated. Scores: s̄ (planted M3GLVQ run); L1 with NAICS levels
-  2/3/4 in its own stratified 5-fold CV (10 repetitions, seed 20261112 + rep); L1 grouped by primary code;
+- **Spy**: pool = training label 0, always wrong, not isolated. Scores: s̄ (planted M3GLVQ run); LR with NAICS levels
+  2/3/4 in its own stratified 5-fold CV (10 repetitions, seed 20261112 + rep); LR grouped by primary code;
   HGB (`categorical_features=[primary code]`, `random_state=20261112 + rep`, without `class_weight`). OOF score = mean
   over repetitions. Spy threshold t = 5 % (10 %) quantile of s̄ among all 104 spies.
 
